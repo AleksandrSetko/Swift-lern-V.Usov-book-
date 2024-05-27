@@ -411,4 +411,14 @@ let myMusicStyle = ["Rock", "Jaz", "Pop"]
 for (index, musicName) in myMusicStyle.enumerated() {
     print("\(index+1). I like \(musicName)")
 }
+// Listing 10.45 stride(from:to:by) функция формирует последовательность значений от и до с шагом
+for i in stride(from: 1, to: 10, by: 3) {
+    print(i)
+}
 
+
+var resultFunc = 0
+for _ in stride(from: 1, through: 1000, by: 2) {
+    resultFunc += 1
+}
+resultFunc
