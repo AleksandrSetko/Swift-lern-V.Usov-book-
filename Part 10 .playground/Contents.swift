@@ -381,3 +381,34 @@ for myChar in myString {
 for _ in 1...3 {
     print("Повторяющаяся строка")
 }
+
+// 10.41 итерации в Dictionary
+var countriesAndBlocks = ["Россия": "СНГ", "Франсция": "ЕС"]
+for (countryName, orgName) in countriesAndBlocks {
+    print("\(countryName) вступила в \(orgName)")
+}
+
+// Листинг 10.42 используя нижнее подчеркивание мы игнорируем один из параметров Словаря
+for (countryName, _) in countriesAndBlocks {
+    print("Страна - \(countryName)")
+}
+for (_, orgName) in countriesAndBlocks {
+    print("Организация - \(orgName)")
+}
+
+// Listing 10.43 работ только с ключами Словаря через свойства keys
+for countryName in countriesAndBlocks.keys {
+    print("страна - \(countryName)")
+}
+
+for orgName in countriesAndBlocks.values {
+    print("организация - \(orgName)")
+}
+
+// Listing 10.44
+print("A few facts about me:")
+let myMusicStyle = ["Rock", "Jaz", "Pop"]
+for (index, musicName) in myMusicStyle.enumerated() {
+    print("\(index+1). I like \(musicName)")
+}
+
