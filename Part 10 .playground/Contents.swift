@@ -352,4 +352,32 @@ while currentNum <= lastNum {
  
 
 //: for
+let numArray: Array<Int> = [1,2,3,4,5,]
+var resultArray: Int = 0
+for number in numArray {
+    resultArray += number
+}
+print(resultArray)
 
+// 10.28 диапазон в цикл
+for i in 1...5 {
+    print(i)
+}
+
+for i in "Swift" {
+    print(i)
+}
+
+// внешняя переменная не влияет на одноменную переменную в теле цикла
+
+var myChar = "a"
+let myString = "Swift"
+for myChar in myString {
+    let myString = "Char is"
+    print("\(myString) \(myChar)")
+}
+
+
+for _ in 1...3 {
+    print("Повторяющаяся строка")
+}
