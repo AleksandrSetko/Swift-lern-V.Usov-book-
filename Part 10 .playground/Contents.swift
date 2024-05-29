@@ -418,8 +418,8 @@ for i in stride(from: 1, to: 10, by: 3) {
 
 
 var resultFunc = 0
-for _ in stride(from: 1, through: 1000, by: 2) {
-    resultFunc += 1
+for i in stride(from: 1, through: 1000, by: 2) {
+    resultFunc += i
 }
 resultFunc
 
@@ -438,4 +438,65 @@ if x1 > 0 && y1 > 0 {
 } else {
     print("Не выполнено условия x и y не должны быть равны нулю")
 }
+
+//: where в конструкции fot-in
+
+var result10 = 0
+for i in 1...10 where i % 2 == 0 {
+    result10 += i
+}
+result10
+
+//Listing 10.51
+// словарь с результатами игр
+let resultOfGames = ["Red Wings": ["2:1", "2:3"], "Capitals": ["3:6", "5:5"], "Penguins": ["3:3", "1:2"]]
+// обработка словаря
+for (teamName, results) in resultOfGames {
+    //обработка массива результатов игр
+    for oneResult in results {
+        print("Игра \(teamName) - \(oneResult)")
+    }
+}
+
+
+for i in 1...10 {
+    if i % 2 == 0 {
+        continue
+    } else {
+        print(i)
+    }
+}
+
+//: breack в конструкции for in
+
+import Foundation
+for i in 1... {
+    let rundomNum = Int(arc4random_uniform(100)) // функция рандома
+    if rundomNum == 5 {
+        print("Итерация номер \(i)")
+        break
+    }
+}
+
+// либо
+for i in 1... {
+    let randNum = Array<Int>(0...100).randomElement()
+    if randNum == 5 {
+        print("Итерация номер \(i)")
+        break
+    }
+}
+
+
+// метка ИМЯ и :
+mainLoop: for i in 1...5 {
+    for y in 1 ... 5 {
+        if y == 4 && i == 2 {
+            break mainLoop
+        }
+        print("\(i) - \(y)")
+    }
+}
+
+//: guard оператор досрочного выхода
 
