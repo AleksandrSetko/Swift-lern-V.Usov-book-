@@ -103,8 +103,8 @@ if let coins = Int(coinsInNewChest) { // лучшее решение!
 //    }
 //}
 //print(max)
+
 //let array = [2, 5, 6, 7, 9 ,1]
-//var i = 0
 //var max = 0
 //for i in array {
 //    if i > max {
@@ -112,6 +112,10 @@ if let coins = Int(coinsInNewChest) { // лучшее решение!
 //    }
 //}
 //print(max)
+
+
+
+// Задача из Семинара № 3
 
 let array = [1,2,3,4,7,0,90,10]
 let a = 0
@@ -124,3 +128,38 @@ for i in array {
 }
 
 res ? print("Yes") : print("No") // тернарное выражение 
+
+
+
+// задачка
+let arr3 = [0, 4, 5, 10, 120, -4, -3]
+for i in arr3 {
+    if i % 2 == 0 && i >= 0 {
+        print(i)
+    }
+}
+
+// задачка
+//let arr4 = [0, 4, 5, 10, 200, -4, -3]
+//var i = 0
+//var max = 0
+//while i < arr4.count {
+//    if arr4[i] > max {
+//        max = arr4[i]
+//    }
+//    i += 1
+//}
+//print(max)
+//print(arr4.count)
+
+
+// Задачи после 3 семинара/ сложение пар массива 1 и последний  2 и предпоследний и так далее
+let firstArray = [-10, -5, -7, -2, 0, 1, 4, 7, 10]
+var secondArray: [Int] = []
+
+for i in 0..<(firstArray.count / 2) {
+    var resault = firstArray[i] * firstArray[firstArray.count - i - 1]
+    secondArray.append(resault)
+}
+
+
